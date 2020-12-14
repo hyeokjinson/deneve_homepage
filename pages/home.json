@@ -1,0 +1,18 @@
+{
+    "hero":{
+        "header":"Antique Interior for Premium Coffee",
+        "subtext":"일산 정발산동 밤리단길 앤틱 감성 카페",
+        "bg_image":"images/deneve_main.jpg"
+    },
+    "about":{
+        "header":"Welcome to Deneve Coffee",
+        "subtext":"경기 고양시 일산동구 율천로7번길 8-12 1층",
+        "bg_image":"/images/third_image.jpg",
+        "images":[
+            {"image":"/images/crople1.jpg","caption":"클래식 크로플"},
+            {"image":"/images/cheeze-1.jpg","caption":"치즈 크로플"},
+            {"image":"/images/chocolatte.jpg","caption":"더티 초코 라떼"}
+        ]
+    }
+
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{>head}}
+  </head>
+  <body>
+    {{>nav}}
+
+
+    <section class="home-slider js-fullheight owl-carousel bg-white">
+      <div class="slider-item js-fullheight">
+      	<div class="overlay"></div>
+        <div class="container-fluid p-0">
+          <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+          	<div class="one-third order-md-last img js-fullheight" style="background-image:url({{page.hero.bg_image}});">
+          		<div class="overlay"></div>
+          	</div>
+	          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+	          	<div class="text mt-md-5">
+		            <h1 class="mb-4">{{{page.hero.header}}}</h1>
+		            <p>{{page.hero.subtext}}</p>
+		            
+	            </div>
+	          </div>
+        	</div>
+        </div>
+      </div>
+
+      <div class="slider-item js-fullheight">
+      	<div class="overlay"></div>
+        <div class="container-fluid p-0">
+          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+          	<div class="one-third order-md-last img js-fullheight" style="background-image:url(images/second_main.jpg);">
+          		<div class="overlay"></div>
+          	</div>
+	          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+	          	<div class="text mt-md-5">
+		            <h1 class="mb-4">밤리단길 Deneve</h1>
+		            <p>커피와 크로플이 맛있는 앤틱감성 카페 '드네브' 입니다. 고소한 맛이 일품인 카페라떼와 시그니처 디저트 클래식 크로플을 함께 추천합니다. 매일 아침 직접 치는 생크림을 제공하며, 매주 직접 담그는 수제 과일청을 사용합니다. 지역 베이커리에서 손수 공수해 오는 맛있고 건강한 디저트도 함께 맛볼 수 있습니다. 많은 방문 부탁드립니다.</p>
+		           
+	            </div>
+	          </div>
+        	</div>
+        </div>
+      </div>
+    </section>
+	
+
+		<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-sm-5 img img-2 d-flex align-items-center justify-content-center justify-content-md-end" style="background-image: url({{page.about.bg_image}}); position: relative"></div>
+					<div class="col-sm-7 wrap-about py-5 ftco-animate">
+	          <div class="heading-section mt-5 mb-4">
+							<div class="pl-lg-5 ml-md-5">
+		          	<span class="subheading">About</span>
+		            <h2 class="mb-4">{{page.about.header}}</h2>
+	            </div>
+	          </div>
+	          <div class="pl-lg-5 ml-md-5">
+							<p>{{page.about.subtext}}</p>
+							<h3 class="mt-5">Special Recipe</h3>
+							<div class="thumb my-4 d-flex">
+                  {{#page.about.images}}
+									<a  class="thumb-menu pr-md-4 text-center"/>
+	            		<div class="img" style="background-image: url({{image}});"></div>
+	            		<h4>{{caption}}</h4>
+	            {{/page.about.images}}
+	            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Specialties</span>
+            <h2 class="mb-4">Our Menu</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Coffee</h3>
+        		</div>
+						{{#coffee}}
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({{image}});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{name}}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">₩{{price}}</span>
+	                </div>
+	              </div>
+	              <p><span>{{description}}</span></p>
+              </div>
+            </div>
+            {{/coffee}}
+        	</div>
+
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>SIGNATURE</h3>
+        		</div>
+							{{#signature}}
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({{image}});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{name}}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">₩{{price}}</span>
+	                </div>
+	              </div>
+	              <p><span>{{description}}</span></p>
+              </div>
+            </div>
+            {{/signature}}
+        	</div>
+
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>LATTE</h3>
+        		</div>
+						{{#latte}}
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({{image}});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{name}}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">₩{{price}}</span>
+	                </div>
+	              </div>
+	              <p><span>{{description}}</span></p>
+              </div>
+            </div>
+        		{{/latte}}
+        	</div>
+
+        	<!--  -->
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>TEA</h3>
+        		</div>
+        		{{#tea}}
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({{image}});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{name}}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">₩{{price}}</span>
+	                </div>
+	              </div>
+	              <p><span>{{description}}</span></p>
+              </div>
+            </div>
+        		{{/tea}}
+        	</div>
+        	
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>ADE</h3>
+        		</div>
+        		{{#ade}}
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({{image}});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{name}}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">₩{{price}}</span>
+	                </div>
+	              </div>
+	              <p><span>{{description}}</span></p>
+              </div>
+            </div>
+        		{{/ade}}
+        	</div>
+
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>DESSERT</h3>
+        		</div>
+        			{{#dessert}}
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url({{image}});"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>{{name}}</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">₩{{price}}</span>
+	                </div>
+	              </div>
+	              <p><span>{{description}}</span></p>
+              </div>
+            </div>
+        		{{/dessert}}
+        	</div>
+        </div>
+    	</div>
+
+    </section>
+
+			
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container">
+				<div class="row d-flex">
+          <div class="col-md-5 ftco-animate img img-2" style="background-image: url(images/reserve.jpg);"></div>
+          <div class="col-md-7 ftco-animate makereservation p-4 p-md-5">
+          	<div class="heading-section ftco-animate mb-5">
+	          	<span class="subheading">Book a Table</span>
+	            <h2 class="mb-4">시설 대관 및 앤틱 소품 문의<br>방문 3일전에 문의 주세요</h2>
+	          </div>
+            <form action="/order" method="post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Name</label>
+                    <input id="order-name" name="name" type="text" class="form-control" placeholder="이름">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Phone</label>
+                    <input id="order-phone" name="phone" type="text" class="form-control" placeholder="핸드폰번호">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="">Order</label>
+                    <textarea  id="order-description" name="order" class="form-control" row="8" style="background-color:#fffffa" placeholder="문의내역 작성해 주세요"></textarea>
+                  </div>
+                </div>
+                
+                <div class="col-md-12 mt-3">
+                  <div id="btn-order-container" class="form-group">
+                    <input id="btn-order" type="submit" value="문의하기" class="btn btn-primary py-3 px-5">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+			</div>
+		</section>
+
+    {{>footer}}
+ <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    {{>scripts}}
+  
+		<script>
+			(function(){
+				console.log('hello!')
+				$('#btn-order').click(function(event){
+					if(event)
+						event.preventDefault()
+					var order={
+						name:$('#order-name').val(),
+						phone:$('#order-phone').val(),
+						order:$('#order-description').val()
+					}
+					
+					console.log('주문 예약 완료!'+ JSON.stringify(order))
+					$.ajax({
+						url:'/order',
+						method:'post',
+						data:order,
+						success:function(resp){
+							console.log('ORDER RECEIVED:'+JSON.stringify(resp))
+							$('#btn-order-container').html('<h3>확인 후 문자 드리겠습니다.</h3>')
+
+						},
+						error:function(resp){
+
+
+						}
+					})
+				})
+
+			})()
+		</script>
+
+    
+  </body>
+</html>
